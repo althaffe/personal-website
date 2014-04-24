@@ -102,14 +102,19 @@ body {
 body {
 	background: rgba(45,64,82,1);
 }
-h1{
+h1,h2{
 	font-family:'Open Sans';
-	font-size:1	00%;
 	color:rgb(245,245,245);
 	text-shadow: 4px 4px 0px rgba(236,237,238 ,0.5);
 }
+
 #content h1{
 	font-size:9em;
+}
+
+#content h2{
+    font-size:3em;
+    text-shadow: 2px 2px 0px rgba(236,237,238 ,0.5);
 }
 
 p { 
@@ -144,11 +149,23 @@ p {
 	font-family:'Caviar Dreams';
 	src:url(../fonts/CaviarDreams.ttf);
 }
+
 a {
 	text-decoration:none;
 	color:inherit;
-	border-bottom:1px dashed rgb(245,245,245);
-	
+}
+
+.bordered {
+	border-bottom:1px dashed rgb(245,245,245); 
+}
+
+.mail:hover:before{
+    content:"{ ";
+    position: relative;
+}
+
+.mail:hover:after{
+    content: " }";
 }
 
 
