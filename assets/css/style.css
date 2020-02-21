@@ -1,0 +1,478 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+a {
+    color: #fefefe;
+}
+body {
+    background: #222;
+    color: #fefefe;
+    font-family: 'Karla';
+    /* background: url('dot-grid.png'); */
+}
+.project-content,.work-page footer {
+    background: #fefefe;
+    color: #222;
+}
+.work-page .project-content a, .work-page footer a {
+    color: #222;
+}
+.work-page footer {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+p {
+    line-height: 1.25;
+}
+.intro {
+    max-width: 45rem;
+    line-height: 1.45;
+    font-size: 1.3rem;
+    opacity: 0.6;
+}
+.intro span {
+    /* background:#ffff007d; */
+}
+main {
+}
+header {
+}
+footer {
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer li {
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+}
+footer li:not(:last-child):after {
+    content: '•';
+    position: absolute;
+    right: -3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+footer li:first-child {
+    padding-left: 0px;
+}
+header .container {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+.logo {
+    font-weight: normal;
+    line-height: 1;
+    font-family: 'Karla';
+    font-size: 1.3rem;
+}
+.logo img {
+    width: 40px;
+    filter: invert();
+}
+.main-heading {
+    line-height: 1;
+    font-size: 5rem;
+    margin-top: 4.5rem;
+    margin-bottom: 0px;
+}
+.subtitle {
+    font-family: 'EB Garamond';
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: normal;
+}
+.menu {
+    padding: 0;
+    font-family: 'Karla';
+    margin-left: 50px;
+}
+.menu li {
+    list-style-type: none;
+    font-size: 1.2rem;
+    position: relative;
+    opacity: 0.7;
+    font-weight: 500;
+    transition: opacity 0.3s;
+    display: inline-block;
+    margin-left: 20px;
+    border-bottom: 2px solid transparent;
+}
+.menu li a {
+    text-decoration: none;
+}
+.menu li.active, .menu li:hover {
+    opacity: 1;
+    border-color: rgba(255,255,255,0.3);
+}
+/* .menu li.active:before {
+    width: 10px;
+    height: 10px;
+    content: '';
+    border: 3px solid #222;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+.works {
+    min-height: 500px;
+}
+.title {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+}
+.content {
+    max-width: 45rem;
+    padding: 5rem 0;
+}
+section {
+    padding-top: 1rem;
+}
+.links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.links li {
+    list-style-type: none;
+    max-width: 30%;
+    margin-bottom: 30px;
+}
+.links li a {
+    text-decoration: none;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+.links li a > span {
+    font-size: 1rem;
+    font-weight: normal;
+    display: block;
+    font-family: 'Karla';
+}
+.images {
+    display: flex;
+}
+.works ul {
+    list-style-type: none;
+    padding: 0px;
+    margin-left: 200px;
+    /* width: 100%;
+    display: flex;
+    justify-content: space-between; */
+}
+.project-item h2 {
+    margin: 0;
+}
+.works .project-item li {
+    margin-top: 3.5rem;
+    display: flex;
+}
+.works .project-details {
+    font-size: 20px;
+    margin-left: 40px;
+}
+.project-details p {
+    font-family: 'EB Garamond';
+}
+.works img {
+    max-width: 300px;
+}
+.project-nav {
+    font-family: 'EB Garamond';
+    font-size: 32px;
+    font-style: italic;
+}
+.project-nav li {
+    padding: 7px 0;
+    border-bottom: 1px solid #fefefe;
+    display: block;
+    width: 240px;
+}
+.project-nav li:first-child, .project-nav li:hover {
+    font-weight: 600;
+}
+
+.hero {
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.hero h1 {
+    font-size: 5rem;
+    margin: 0;
+    font-family: 'Karla';
+}
+.hero .subtitle {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.4rem;
+    font-family: 'EB Garamond';
+    text-transform: lowercase;
+    position: relative;
+    top: -12px;
+}
+.hero p {
+    max-width: 45rem;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+.bookamrks ul {
+    margin: 0px;
+}
+.bookmarks li {
+    list-style-type: none;
+}
+.bookmarks li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: flex;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 20px;
+}
+.bookmarks li a:hover {
+    background: rgba(255,255,255,0.05);
+}
+.bookmarks span {
+    display: inline-block;
+}
+
+.bookmark-link {
+    width: 50%;
+}
+.bookmark-author {
+    margin-left: auto;
+    color: rgba(255,255,255,0.6);
+}
+.selected-work {
+    position: relative;
+}
+.selected-work-preview {
+    filter: grayscale();
+    background-repeat:  no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: calc((-100vw + 1100px)/2);
+    content: '';
+    z-index: -1;
+    opacity: 0.5;
+    background-size: 50%;
+    background-position: right center;
+}
+section h2:before {
+    display: block;
+    position: absolute;
+    background: #fefefe;
+    width: 70px;
+    height: 3px;
+    left: -80px;
+    top: 15px;
+    content: '';
+}
+section h2 {
+    position: relative;
+}
+.selected-work ul {
+    display: flex;
+    width: 85%;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.selected-work li {
+    list-style: none;
+    margin-bottom: 70px;
+    margin-right: 60px;
+}
+.selected-work li a {
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 20px 5px;
+    border-bottom: 2px solid #fefefe;
+    transition: all 0.1s;
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+}
+.selected-work li a:hover {
+    color: #222;
+}
+.selected-work li a:after {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #fefefe;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.5s ease-in-out;
+}
+.selected-work li a:hover:after {
+    width: 100%;
+}
+
+.project-meta {
+    padding: 7rem 0;
+}
+.project-meta h1 {
+    font-size: 1.7rem;
+    margin: 0 0 0px;
+    color: rgba(255,255,255,0.6);
+}
+.project-meta h1 a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-left: 5px;
+}
+.project-description {
+    max-width: 45rem;
+    font-size: 2rem;
+    line-height: 1.25;
+    font-family: 'EB Garamond';
+    margin-top: 15px;
+}
+.project-skills {
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+    font-size: 1.3rem;
+    font-family: 'EB Garamond';
+}
+.project-content {
+    padding: 3rem 0 1rem;
+}
+.project-content img {
+    max-width: 100%;
+    border-radius: 1%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    margin: 1rem 0;
+}
+.project-content p {
+    font-size: 1.3rem;
+    max-width: 77%;
+    line-height: 1.5;
+}
+.project-content blockquote {
+    margin: 0;
+    padding-left: 2rem;
+    border-left: 5px solid;
+    font-family: 'EB Garamond';
+}
+.project-content blockquote p {
+    font-size: 1.7rem;
+}
+.post-gallery {
+    display: flex;
+}
+.post-gallery > *:nth-child(odd) {
+    margin-right: 20px;
+}
+.about-container {
+    display: flex;
+    justify-content: space-between;
+}
+.about-sidebar {
+    flex: 0.35;
+    display: none;
+}
+.about-sidebar ul {
+    list-style: none;
+}
+.about-sidebar li {
+    margin-bottom: 10px;
+}
+.about-sidebar a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.about-content {
+    flex: 0.6;
+}
+.about-sidebar img {
+    max-width: 100%;
+    opacity: 0.6;
+}
+@media screen and (max-width: 768px) {
+    .bookmarks ul {
+        padding-left: 0px;
+    }
+    .bookmarks .bookmark-tags {
+        display: none;
+    }
+    .hero {
+        padding: 20px 0px;
+    }
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .bookmarks .bookmark-link {
+        width: auto;
+    }
+    .selected-work li {
+        margin-bottom: 50px;
+    }
+    .selected-work-preview {
+        display: none;
+    }
+    .project-meta {
+        padding: 5rem 0px;
+    }
+    .project-content p {
+        max-width: none;
+    }
+    .project-content blockquote {
+        padding-left: 1rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .bookmarks .bookmark-author {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero .subtitle {
+        margin-top: 10px;
+        line-height: 1.25;
+    }
+    .selected-work li {
+        margin-bottom: 15px;
+    }
+    .selected-work li a {
+        font-size: 1.5rem;
+    }
+    .content {
+        padding: 2rem 0;
+    }
+    .project-meta h1 {
+        font-size: 1.5rem;
+    }
+    .project-description {
+        font-size: 1.7rem;
+    }
+    .project-meta {
+        padding: 3rem 0px;
+    }
+}
