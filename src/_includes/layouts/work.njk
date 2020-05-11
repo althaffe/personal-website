@@ -1,0 +1,18 @@
+---
+ layout: layouts/base.njk
+---
+<div class="project-meta">
+  <div class="container">
+    <h1>
+      {{ title }}
+      {% if link %} <a href="{{link}}"> &#128279; </a> {% endif %}
+    </h1>
+    <p class="project-description">{{ description }}</p>
+    <p class="project-skills">{{ skills }}</p>
+  </div>
+</div>
+<div class="project-content">
+  <div class="container">
+    {{ content | safe }}
+  </div>
+</div>

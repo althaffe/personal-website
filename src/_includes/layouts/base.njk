@@ -12,40 +12,21 @@
 
     <title>Muhammad Althaf</title>
   </head>
-  <body  class="work-page" >
+  <body {% if layout == 'layouts/work' %} class="work-page" {% endif %}>
     <header>
       <div class="container">
         <a href="/" class="logo"><img alt="" src="/assets/images/dot-logo.png"/></a>
-        
+        {% if navigation.items %}
           <ul class="menu">
-            
-              <li ><a href="/"> Home</a></li>
-            
-              <li ><a href="/bookmarks/"> Bookmarks</a></li>
-            
+            {% for item in navigation.items %}
+              <li {% if page.url == item.url %} class="active" {% endif %}><a href="{{ item.url }}"> {{ item.text }}</a></li>
+            {% endfor %}
           </ul>
-        
+        {% endif %}
       </div>
     </header>
     <main>
-      <div class="project-meta">
-  <div class="container">
-    <h1>
-      JavaScript Stash
-       <a href="https://www.cosmicjs.com/apps/content-curation-website"> &#128279; </a> 
-    </h1>
-    <p class="project-description">A curated collection of javascript resources — built as an installable app for CosmicJS Platform</p>
-    <p class="project-skills">Vue, Bulma, CosmicJS</p>
-  </div>
-</div>
-<div class="project-content">
-  <div class="container">
-    <p><img src="/assets/images/works/stash-1.png" alt="javascript stash"></p>
-<p><img src="/assets/images/works/stash-2.png" alt="javascript stash"></p>
-
-  </div>
-</div>
-
+      {{ content | safe }}
     </main>
     <footer>
       <div class="container">

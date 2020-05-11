@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+title: Muhammad Althaf 
+---
+<div class="container">
+  <div class="content">
+    <h1 class="title">
+      Hello, I am Althaf
+    </h1>
+    <h2 class="subtitle">Full-stack web developer, interaction design enthusiast and a human with an endless fascination for beauty and meaning.</h2>
+    <p class="intro">
+      I am available for freelance Vue.js and Node.js projects. If you are looking to get something done, feel free to <a href="mailto:althaf.mec@gmail.com">reach out</a>.
+    </p>
+  </div>
+  <section class="selected-work">
+    <div class="selected-work-preview"></div>
+    <h2>Selected Works</h2>
+    <ul>
+      {% for project in collections.works %}
+      <li>
+        <a href="{{project.data.title | slug}}" onmouseover="setWorkPreview('{{project.data.image}}')" onmouseout="clearPreview()">
+          {{ project.data.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <!-- <section>
+      <h2>From the wiki</h2>
+      <ul class="links">
+          <li>
+              <a href="">
+                  Notes
+                  <span>Random brain dumps, bottled for your interest</span>
+              </a>
+          </li>
+      </ul>
+  </section>
+  -->
+</div>
+<script>
+ var preview = document.querySelector('.selected-work-preview');
+ function setWorkPreview(image) {
+   preview.style['background-image'] = `url(/assets/images/works/${image})`;
+ }
+ function clearPreview() {
+   preview.style['background-image'] = ''
+ }
+</script>

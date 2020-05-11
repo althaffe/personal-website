@@ -1,0 +1,21 @@
+---
+layout: layouts/base
+---
+<div class="hero">
+  <h1>Works</h1>
+  <h2 class="subtitle">Experiments in webcraft</h2>
+  <p>I work with clients around the world to bring their ideas and prototypes to life. These days I mostly work with <strong>Vue.js</strong> and <strong>Node.js</strong></p>
+</div>
+<section class="works">
+  <ul class="project-item">
+    {% for project in collections.works %}
+      <li>
+        <img alt="" src="/assets/images/works/{{ project.data.image }}"/>
+        <div class="project-details">
+          <h2>{{ project.data.title }}</h2>
+          <p>{{ project.data.description }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
